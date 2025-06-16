@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "814460464105",
+    "project_id": "launch-pad-f5ca2",
+    "storage_bucket": "launch-pad-f5ca2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814460464105:android:227536db9a98f6702fb978",
+        "android_client_info": {
+          "package_name": "com.wocketship.launchpad"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoZ8dMEMu4kymnaftf4mm-Lm0OCBVKEOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

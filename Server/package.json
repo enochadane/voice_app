@@ -1,0 +1,19 @@
+{
+  "name": "quickstart",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "twilio-run",
+    "deploy": "twilio-run deploy",
+    "start:express": "node index.js"
+  },
+  "devDependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "twilio": "^5.7.0",
+    "twilio-run": "^4.2.0"
+  }
+}
