@@ -37,6 +37,9 @@ module.exports = async (req, res) => {
     case 'ringing':
       console.log('🔔 Phone is ringing...'); // user A 
       break;
+    case 'answered':
+      console.log('✅ Call answered!');
+      break;
     case 'in-progress':
       console.log('📞 Call is in progress...');
       break;

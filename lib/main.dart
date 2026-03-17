@@ -118,19 +118,35 @@ class _MyHomePageState extends State<MyHomePage> {
   void setCallEventsListener() {
     callEventsListener = TwilioVoiceServices.callEventsListener.listen((event) {
       debugPrint("callEventsListener is Call Event: ${event.status} ${event}");
-      if (event.status == TwilioVoiceFlutterStatus.ringing ) {
-        _callStatus = "Ringing...";
-      } else if (event.status == TwilioVoiceFlutterStatus.connecting) {
-        _callStatus = "Connecting...";
-      } else if (event.status == TwilioVoiceFlutterStatus.reconnected) {
-        _callStatus = "Reconnected...";
-      } else if (event.status == TwilioVoiceFlutterStatus.disconnected) {
-        endCall();
-      }
-      else if (event.status == TwilioVoiceFlutterStatus.connected) {
-        _callStatus = "Connected";
-     } else {
-        _callStatus = "";
+      
+      switch (event.status) {
+        case TwilioVoiceFlutterStatus.ringing:
+          _callStatus = "Ringing...";
+          break;
+        case TwilioVoiceFlutterStatus.connecting:
+          _callStatus = "Connecting...";
+          break;
+        case TwilioVoiceFlutterStatus.reconnected:
+          _callStatus = "Reconnected...";
+          break;
+        case TwilioVoiceFlutterStatus.disconnected:
+          endCall();
+          break;
+        case TwilioVoiceFlutterStatus.connected:
+          _callStatus = "Call Connected";
+          break;
+        case TwilioVoiceFlutterStatus.answered:
+          _callStatus = "Call Answered";
+          break;
+        case TwilioVoiceFlutterStatus.busy:
+          _callStatus = "Call Busy";
+          break;
+        case TwilioVoiceFlutterStatus.failed:
+          _callStatus = "Call Failed";
+          break;
+        default:
+          _callStatus = "";
+          break;
       }
       setState(() {});
     });
